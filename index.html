@@ -4,7 +4,10 @@
     <title>Meowix Linux</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Comfortaa"
@@ -28,12 +31,21 @@
         position: sticky;
         top: 0;
       }
-      #meowixFooter {
-        width: 100%;
-      }
       #meowixIntro {
         padding-right: 200px;
         padding-left: 200px;
+      }
+      @media (max-width: 900px) {
+        #meowixIntro img {
+          width: 50%;
+          height: 50%;
+        }
+      }
+      @media (max-width: 900px) {
+        #meowixHeader img {
+          width: 20%;
+          height: 20%;
+        }
       }
       body {
         background-color: #1e1e2e;
@@ -43,24 +55,35 @@
         background-color: #313244;
         color: #cdd6f4;
       }
+      .btn-surface1 {
+        background-color: #313244;
+        color: #cdd6f4;
+        border-color: #cdd6f4;
+      }
+      .custom-card {
+        margin-bottom: 20px;
+      }
+      .footer-padding {
+        padding: 20px;
+      }
     </style>
   </head>
   <body>
-    <div class="w3-container surface1" id="meowixHeader">
+    <div class="container-fluid surface1" id="meowixHeader">
       <a href="https://meowix-linux.github.io"
-        ><image
+        ><img
+          class="img-responsive"
           src="https://raw.githubusercontent.com/Meowix-Linux/Meowix-ISO/main/assets/meowix-text.svg"
           width="10%"
           height="10%"
-        ></image
-      ></a>
+      /></a>
     </div>
-    <div class="w3-container w3-large w3-center" id="meowixIntro">
-      <image
+    <div class="container-fluid text-center" id="meowixIntro">
+      <img
         src="https://raw.githubusercontent.com/Meowix-Linux/Meowix-ISO/main/assets/meowix.svg"
         width="20%"
         height="20%"
-      ></image>
+      />
       <h1>Welcome to Meowix Linux</h1>
       <p>
         Meowix Linux is an <a href="https://archlinux.org/">Arch Linux</a>-based
@@ -72,13 +95,13 @@
       </p>
       <a
         href="https://github.com/Meowix-Linux/Meowix-ISO/#installation"
-        class="w3-button w3-round surface1"
+        class="btn btn-surface1"
         >Installation Guide</a
       >
     </div>
     <br />
-    <div class="w3-container w3-large w3-center" id="meowixWhy">
-      <div class="w3-container w3-large w3-center">
+    <div class="container-fluid text-center" id="meowixWhy">
+      <div class="container text-center">
         <h2>Why Choose Meowix Linux?</h2>
         <p>
           Meowix Linux is not just another Linux distribution; it's a purrfect
@@ -86,9 +109,9 @@
           love it:
         </p>
 
-        <div class="w3-row">
-          <div class="w3-col m6">
-            <div class="w3-card surface1 w3-padding">
+        <div class="row">
+          <div class="col-md-6 d-flex">
+            <div class="card custom-card p-3 surface1 flex-fill">
               <h3>Unique Catppuccin Mocha Theme</h3>
               <p>
                 Experience a visually pleasing and distinctive custom-crafted
@@ -96,8 +119,8 @@
               </p>
             </div>
           </div>
-          <div class="w3-col m6">
-            <div class="w3-card surface1 w3-padding">
+          <div class="col-md-6 d-flex">
+            <div class="card custom-card p-3 surface1 flex-fill">
               <h3>BSPWM Brilliance</h3>
               <p>
                 Be productive with the powerful BSPWM window manager, allowing
@@ -108,9 +131,9 @@
           </div>
         </div>
 
-        <div class="w3-row">
-          <div class="w3-col m6">
-            <div class="w3-card surface1 w3-padding">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card custom-card p-3 surface1">
               <h3>Rock-Solid Arch Base</h3>
               <p>
                 Meowix Linux is based on Arch Linux, a simple rolling-release
@@ -119,8 +142,8 @@
               </p>
             </div>
           </div>
-          <div class="w3-col m6">
-            <div class="w3-card surface1 w3-padding">
+          <div class="col-md-6">
+            <div class="card custom-card p-3 surface1">
               <h3>Seamless Installation</h3>
               <p>
                 The Meowix Linux ISOs include the Calamares installer, which
@@ -132,13 +155,13 @@
         </div>
         <a
           href="https://github.com/Meowix-Linux/Meowix-ISO/#installation"
-          class="w3-button w3-round surface1 w3-margin-top"
+          class="btn btn-surface1 mt-3"
           >Get Started with Meowix</a
         >
       </div>
     </div>
     <br />
-    <div class="w3-container surface1" id="meowixFooter">
+    <div class="container-fluid surface1 footer-padding" id="meowixFooter">
       <p>
         All repositories in the Meowix Linux GitHub organization are copyleft
         🄯2023-present Meowix Linux and licensed under the GPLv3 License. Some
