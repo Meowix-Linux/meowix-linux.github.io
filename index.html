@@ -66,19 +66,6 @@
       .footer-padding {
         padding: 20px;
       }
-      .popup {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #1e1e2e;
-        padding: 20px;
-        box-shadow: 0px 0px 10px #000;
-        z-index: 9999;
-        border-radius: 10px;
-        color: #cdd6f4;
-      }
     </style>
   </head>
   <body>
@@ -218,25 +205,5 @@
         rights reserved.
       </p>
     </div>
-    <div class="popup" id="popup">
-      <p>
-        There is currently an issue with the Calamares installer program that
-        prevents the distribution from being installed. See
-        <a href="https://github.com/Meowix-Linux/Meowix-ISO/discussions/8"
-          >this announcement</a
-        >
-        for more info.
-      </p>
-      <button class="btn btn-surface1" onclick="closePopup()">OK</button>
-    </div>
-    <script>
-      function showPopup() {
-        document.getElementById("popup").style.display = "block";
-      }
-      function closePopup() {
-        document.getElementById("popup").style.display = "none";
-      }
-      window.onload = showPopup;
-    </script>
   </body>
 </html>
